@@ -4,11 +4,11 @@ import { validateFields } from "../../middlewares/validateFields.js";
 import { checkIdExists } from "../../helpers/validators/checkIdExists.js";
 import { validateJWT } from "../../middlewares/validateJWT.js";
 import UserStatus from "../../models/UserStatus.js";
-import { userStatusListController } from "../../controllers/shared/userStatuses/userStatusListController.js";
-import { userStatusShowController } from "../../controllers/shared/userStatuses/userStatusShowController.js";
-import { userStatusStoreController } from "../../controllers/shared/userStatuses/userStatusStoreController.js";
-import { userStatusUpdateController } from "../../controllers/shared/userStatuses/userStatusUpdateController.js";
-import { userStatusDeleteController } from "../../controllers/shared/userStatuses/userStatusDeleteController.js";
+import { userStatusListController } from "../../controllers/shared/user_statuses/userStatusListController.js";
+import { userStatusShowController } from "../../controllers/shared/user_statuses/userStatusShowController.js";
+import { userStatusStoreController } from "../../controllers/shared/user_statuses/userStatusStoreController.js";
+import { userStatusUpdateController } from "../../controllers/shared/user_statuses/userStatusUpdateController.js";
+import { userStatusDeleteController } from "../../controllers/shared/user_statuses/userStatusDeleteController.js";
 
 
 const router = Router();

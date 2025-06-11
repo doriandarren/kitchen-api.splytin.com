@@ -1,16 +1,16 @@
 import { BaseRepository } from '../../helpers/repositories/baseRepository.js';
-import Country from '../../models/Country.js';
+import UserStatus from '../../models/UserStatus.js';
 import { Op } from 'sequelize'; // Para queries avanzadas si las necesitas
 
 
 //const WITH = ['roles', 'status'];
 
 
-export class CountryRepository extends BaseRepository {
+export class UserStatusRepository extends BaseRepository {
   
   // 📌 List
   async list() {
-    return await Country.findAll({
+    return await UserStatus.findAll({
       order: [this.LATEST],
       //include: WITH // relations
     });
@@ -18,14 +18,14 @@ export class CountryRepository extends BaseRepository {
 
   // 📌 Show
   async show(id) {
-    return await Country.findByPk(id, {
+    return await UserStatus.findByPk(id, {
       //include: WITH
     });
   }
 
   // 📌 Find
   async findByEmail(email) {
-    return await Country.findOne({
+    return await UserStatus.findOne({
       where: { email },
       //include: WITH
     });
@@ -33,33 +33,33 @@ export class CountryRepository extends BaseRepository {
 
   // 📌 Store
   async store(data) {
-    return await Country.create(data);
+    return await UserStatus.create(data);
   }
 
   // 📌 Update
   async update(id, data) {
-    const data = await Country.findByPk(id);
-    if (!data) return null;
-    return await data.update(data);
+    const record = await UserStatus.findByPk(id);
+    if (!record) return null;
+    return await record.update(data);
   }
 
   // 📌 Destroy (soft-delete)
   async destroy(id) {
-    const data = await Country.findByPk(id);
+    const data = await UserStatus.findByPk(id);
     if (!data) return null;
     return await data.destroy();
   }
 
   // 📌 Restaurar usuario soft-deleted
   async restore(id) {
-    const data = await Country.findByPk(id, { paranoid: false });
+    const data = await UserStatus.findByPk(id, { paranoid: false });
     if (!data) return null;
     return await data.restore();
   }
 
   // 📌 Buscar por nombre o correo
   async search(term) {
-    return await Country.findAll({
+    return await UserStatus.findAll({
         include: WITH,
         where: {
             [Op.or]: [

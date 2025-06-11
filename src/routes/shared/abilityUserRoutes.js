@@ -4,11 +4,11 @@ import { validateFields } from "../../middlewares/validateFields.js";
 import { checkIdExists } from "../../helpers/validators/checkIdExists.js";
 import { validateJWT } from "../../middlewares/validateJWT.js";
 import AbilityUser from "../../models/AbilityUser.js";
-import { abilityUserListController } from "../../controllers/shared/abilityUsers/abilityUserListController.js";
-import { abilityUserShowController } from "../../controllers/shared/abilityUsers/abilityUserShowController.js";
-import { abilityUserStoreController } from "../../controllers/shared/abilityUsers/abilityUserStoreController.js";
-import { abilityUserUpdateController } from "../../controllers/shared/abilityUsers/abilityUserUpdateController.js";
-import { abilityUserDeleteController } from "../../controllers/shared/abilityUsers/abilityUserDeleteController.js";
+import { abilityUserListController } from "../../controllers/shared/ability_users/abilityUserListController.js";
+import { abilityUserShowController } from "../../controllers/shared/ability_users/abilityUserShowController.js";
+import { abilityUserStoreController } from "../../controllers/shared/ability_users/abilityUserStoreController.js";
+import { abilityUserUpdateController } from "../../controllers/shared/ability_users/abilityUserUpdateController.js";
+import { abilityUserDeleteController } from "../../controllers/shared/ability_users/abilityUserDeleteController.js";
 
 
 const router = Router();

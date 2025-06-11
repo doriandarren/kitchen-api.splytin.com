@@ -4,11 +4,11 @@ import { validateFields } from "../../middlewares/validateFields.js";
 import { checkIdExists } from "../../helpers/validators/checkIdExists.js";
 import { validateJWT } from "../../middlewares/validateJWT.js";
 import AbilityGroup from "../../models/AbilityGroup.js";
-import { abilityGroupListController } from "../../controllers/shared/abilityGroups/abilityGroupListController.js";
-import { abilityGroupShowController } from "../../controllers/shared/abilityGroups/abilityGroupShowController.js";
-import { abilityGroupStoreController } from "../../controllers/shared/abilityGroups/abilityGroupStoreController.js";
-import { abilityGroupUpdateController } from "../../controllers/shared/abilityGroups/abilityGroupUpdateController.js";
-import { abilityGroupDeleteController } from "../../controllers/shared/abilityGroups/abilityGroupDeleteController.js";
+import { abilityGroupListController } from "../../controllers/shared/ability_groups/abilityGroupListController.js";
+import { abilityGroupShowController } from "../../controllers/shared/ability_groups/abilityGroupShowController.js";
+import { abilityGroupStoreController } from "../../controllers/shared/ability_groups/abilityGroupStoreController.js";
+import { abilityGroupUpdateController } from "../../controllers/shared/ability_groups/abilityGroupUpdateController.js";
+import { abilityGroupDeleteController } from "../../controllers/shared/ability_groups/abilityGroupDeleteController.js";
 
 
 const router = Router();

@@ -1,16 +1,16 @@
 import { BaseRepository } from '../../helpers/repositories/baseRepository.js';
-import Role from '../../models/Role.js';
+import AbilityUser from '../../models/AbilityUser.js';
 import { Op } from 'sequelize'; // Para queries avanzadas si las necesitas
 
 
 //const WITH = ['roles', 'status'];
 
 
-export class RoleRepository extends BaseRepository {
+export class AbilityUserRepository extends BaseRepository {
   
   // 📌 List
   async list() {
-    return await Role.findAll({
+    return await AbilityUser.findAll({
       order: [this.LATEST],
       //include: WITH // relations
     });
@@ -18,14 +18,14 @@ export class RoleRepository extends BaseRepository {
 
   // 📌 Show
   async show(id) {
-    return await Role.findByPk(id, {
+    return await AbilityUser.findByPk(id, {
       //include: WITH
     });
   }
 
   // 📌 Find
   async findByEmail(email) {
-    return await Role.findOne({
+    return await AbilityUser.findOne({
       where: { email },
       //include: WITH
     });
@@ -33,33 +33,33 @@ export class RoleRepository extends BaseRepository {
 
   // 📌 Store
   async store(data) {
-    return await Role.create(data);
+    return await AbilityUser.create(data);
   }
 
   // 📌 Update
   async update(id, data) {
-    const data = await Role.findByPk(id);
-    if (!data) return null;
-    return await data.update(data);
+    const record = await AbilityUser.findByPk(id);
+    if (!record) return null;
+    return await record.update(data);
   }
 
   // 📌 Destroy (soft-delete)
   async destroy(id) {
-    const data = await Role.findByPk(id);
+    const data = await AbilityUser.findByPk(id);
     if (!data) return null;
     return await data.destroy();
   }
 
   // 📌 Restaurar usuario soft-deleted
   async restore(id) {
-    const data = await Role.findByPk(id, { paranoid: false });
+    const data = await AbilityUser.findByPk(id, { paranoid: false });
     if (!data) return null;
     return await data.restore();
   }
 
   // 📌 Buscar por nombre o correo
   async search(term) {
-    return await Role.findAll({
+    return await AbilityUser.findAll({
         include: WITH,
         where: {
             [Op.or]: [

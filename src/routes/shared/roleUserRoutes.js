@@ -4,11 +4,11 @@ import { validateFields } from "../../middlewares/validateFields.js";
 import { checkIdExists } from "../../helpers/validators/checkIdExists.js";
 import { validateJWT } from "../../middlewares/validateJWT.js";
 import RoleUser from "../../models/RoleUser.js";
-import { roleUserListController } from "../../controllers/shared/roleUsers/roleUserListController.js";
-import { roleUserShowController } from "../../controllers/shared/roleUsers/roleUserShowController.js";
-import { roleUserStoreController } from "../../controllers/shared/roleUsers/roleUserStoreController.js";
-import { roleUserUpdateController } from "../../controllers/shared/roleUsers/roleUserUpdateController.js";
-import { roleUserDeleteController } from "../../controllers/shared/roleUsers/roleUserDeleteController.js";
+import { roleUserListController } from "../../controllers/shared/role_users/roleUserListController.js";
+import { roleUserShowController } from "../../controllers/shared/role_users/roleUserShowController.js";
+import { roleUserStoreController } from "../../controllers/shared/role_users/roleUserStoreController.js";
+import { roleUserUpdateController } from "../../controllers/shared/role_users/roleUserUpdateController.js";
+import { roleUserDeleteController } from "../../controllers/shared/role_users/roleUserDeleteController.js";
 
 
 const router = Router();
