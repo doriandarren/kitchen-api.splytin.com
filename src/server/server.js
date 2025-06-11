@@ -80,6 +80,8 @@ export class Server {
         // Api
         this.app.use( this.pathApi.auth, authRoutes);
         
+
+        
         
         //TODO Others routes
         
