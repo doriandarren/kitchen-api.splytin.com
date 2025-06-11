@@ -1,0 +1,28 @@
+{
+  "name": "kitchen-api.splytin.com",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "db:connection": "node src/scripts/dbTestConnection.js",
+    "db:reset": "node src/scripts/dbReset.js",
+    "db:alter": "node src/scripts/dbAlter.js",
+    "make:controller": "node scripts/makeController.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.1",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  },
+  "type": "module"
+}
