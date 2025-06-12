@@ -18,7 +18,6 @@ export class Server {
         
         this.app = express();
         this.port = process.env.PORT;
-        //this.path = {};
 
         this.pathApi = {
             auth: '/api/v1/auth',
@@ -79,8 +78,6 @@ export class Server {
 
         // Api
         this.app.use( this.pathApi.auth, authRoutes);
-        
-
         
         
         //TODO Others routes
