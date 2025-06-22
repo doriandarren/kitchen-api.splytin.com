@@ -11,6 +11,10 @@ import userRoutes from '../routes/api/userRoutes.js';
 import devRoutes from '../routes/dev/devRoutes.js';
 
 
+import carbohydrateRoutes from '../routes/api/carbohydrateRoutes.js';  //TODO Agregar esta linea <-->
+
+
+
 
 export class Server {
     
@@ -21,6 +25,7 @@ export class Server {
 
         this.pathApi = {
             auth: '/api/v1/auth',
+            carbohydrate: '/api/v1/carbohydrates', // TODO Agregar esta linea <-->
         }
 
         this.pathShared = {
@@ -78,9 +83,10 @@ export class Server {
 
         // Api
         this.app.use( this.pathApi.auth, authRoutes);
-        
+
         
         //TODO Others routes
+        this.app.use( this.pathApi.carbohydrate, carbohydrateRoutes); //TODO Agregar esta linea <-->
         
     }
 

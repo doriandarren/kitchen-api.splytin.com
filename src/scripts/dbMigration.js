@@ -4,7 +4,7 @@ import User from '../models/User.js';
 
 
 
-async function syncAlter() {
+async function syncMigration() {
   try {
     await sequelize.authenticate();
     console.log('🔌 Conectado a la base de datos');
@@ -19,4 +19,4 @@ async function syncAlter() {
   }
 }
 
-syncAlter();
+syncMigration();
